@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         task1();// Задача 1
-        task2();
-        task3();
+        task2();// Задача 2
+        task3();// Задача 3
         task4();
     }
 
@@ -21,7 +21,6 @@ public class Main {
                 System.out.print(num + " ");
             }
         }
-
     }
 
     public static void task2 (){
@@ -44,7 +43,14 @@ public class Main {
     }
 
     public static void task3 (){
+        System.out.println("Задача 3");
+        List<String> words = new ArrayList<>(List.of("сила", "слава", "сила", "моль", "слава", "ветер", "ветер"));
 
+        Set<String> uniqueWords = new HashSet<>(words);
+
+        for (String word : uniqueWords) {
+            System.out.print(word + " ");
+        }
     }
 
     public static void task4 (){
