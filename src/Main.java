@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -23,7 +25,22 @@ public class Main {
     }
 
     public static void task2 (){
+        System.out.println("Задача 2");
+        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        Set<Integer> uniqueEvenNumbers = new HashSet<>();
 
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                uniqueEvenNumbers.add(num);
+            }
+        }
+
+        List<Integer> sortedEvenNumbers = new ArrayList<>(uniqueEvenNumbers);
+        sortedEvenNumbers.sort(Integer::compareTo);
+
+        for (int num : sortedEvenNumbers) {
+            System.out.print(num + " ");
+        }
     }
 
     public static void task3 (){
