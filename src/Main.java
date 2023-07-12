@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -21,6 +18,8 @@ public class Main {
                 System.out.print(num + " ");
             }
         }
+        System.out.println();
+        System.out.println();
     }
 
     public static void task2 (){
@@ -40,6 +39,8 @@ public class Main {
         for (int num : sortedEvenNumbers) {
             System.out.print(num + " ");
         }
+        System.out.println();
+        System.out.println();
     }
 
     public static void task3 (){
@@ -51,10 +52,23 @@ public class Main {
         for (String word : uniqueWords) {
             System.out.print(word + " ");
         }
+        System.out.println();
+        System.out.println();
     }
 
     public static void task4 (){
+        System.out.println("Задача 4");
+        List<String> strings = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
 
+        Map<String, Integer> wordCounts = new HashMap<>();
+
+        for (String word : strings) {
+            wordCounts.put(word, wordCounts.getOrDefault(word, 0) + 1);
+        }
+
+        for (int count : wordCounts.values()) {
+            System.out.println(count);
+        }
     }
 
 }
